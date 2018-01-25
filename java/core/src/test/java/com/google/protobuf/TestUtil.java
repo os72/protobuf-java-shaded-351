@@ -3769,7 +3769,7 @@ public final class TestUtil {
    * {@link #getTestDataDir}.
    */
   public static String readTextFromFile(String filePath) {
-    return readBytesFromFile(filePath).toStringUtf8();
+    return readBytesFromFile(filePath).toStringUtf8().replace("\r\n", "\n");
   }
 
   private static File getTestDataDir() {
